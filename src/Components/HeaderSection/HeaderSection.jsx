@@ -1878,9 +1878,10 @@ const navigate = useNavigate()
 
         <nav className="p-4 flex flex-col space-y-3">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.id}
-              onClick={() => scrollToSection(item.href)}
+              to={item.link}
+              onClick={() => scrollToSection(item.link)}
               className={`p-3 rounded-lg transition ${
                 activeNav === item.id
                   ? "bg-orange-900/40 text-orange-400"
@@ -1888,7 +1889,7 @@ const navigate = useNavigate()
               }`}
             >
               {item.name}
-            </button>
+            </Link>
           ))}
 
           {/* Mobile Cart */}
