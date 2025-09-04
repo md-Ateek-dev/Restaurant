@@ -1881,7 +1881,7 @@ const navigate = useNavigate()
             <Link
               key={item.id}
               to={item.link}
-              onClick={() => scrollToSection(item.link)}
+              onClick={toggleMobileMenu}
               className={`p-3 rounded-lg transition ${
                 activeNav === item.id
                   ? "bg-orange-900/40 text-orange-400"
